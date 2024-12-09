@@ -10,11 +10,11 @@ with st.form('my_form'):
     st.subheader('상위항목')
 
     # 입력 위젯
-    1_val = st.selectbox('하위항목1분류', ['하위항목1-1', '하위항목1-2', '하위항목1-3'])
-    2_val = st.selectbox('하위항목2분류', ['하위항목2-1', '하위항목2-2', '하위항목2-3'])
-    3_val = st.selectbox('하위항목3분류', ['하위항목3-1', '하위항목3-2', '하위항목3-3'])
-    4_val = st.select_slider('하위항목4분류', ['최저', '저', '중저', '중', '중고', '고', '최고'])
-    5_val = st.checkbox('체크유무')
+    a_val = st.selectbox('하위항목1분류', ['하위항목1-1', '하위항목1-2', '하위항목1-3'])
+    b_val = st.selectbox('하위항목2분류', ['하위항목2-1', '하위항목2-2', '하위항목2-3'])
+    c_val = st.selectbox('하위항목3분류', ['하위항목3-1', '하위항목3-2', '하위항목3-3'])
+    d_val = st.select_slider('하위항목4분류', ['최저', '저', '중저', '중', '중고', '고', '최고'])
+    e_val = st.checkbox('체크유무')
 
     # 모든 양식은 제출 버튼을 가져야 함
     submitted = st.form_submit_button('제출')
@@ -22,11 +22,11 @@ with st.form('my_form'):
 if submitted:
     st.markdown(f'''
         결과 :
-        - 하위항목1 : `{1_val}`
-        - 하위항목2 : `{2_val}`
-        - 하위항목3 : `{3_val}`
-        - 하위항목4 : `{4_val}`
-        - 체크 : `{5_val}`
+        - 하위항목1 : `{a_val}`
+        - 하위항목2 : `{b_val}`
+        - 하위항목3 : `{c_val}`
+        - 하위항목4 : `{d_val}`
+        - 체크 : `{e_val}`
         ''')
 else:
     st.write('결과 없음.')
