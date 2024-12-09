@@ -1,44 +1,44 @@
 import streamlit as st
 
-st.title('st.form')
+st.title('제목')
 
 # 'with' 표기법을 사용한 전체 예시
-st.header('1. `with` 표기법 사용 예시')
-st.subheader('커피 머신')
+st.header('소제목')
+st.subheader('상위항목')
 
 with st.form('my_form'):
-    st.subheader('**커피 주문하기**')
+    st.subheader('상위항목설명')
 
     # 입력 위젯
-    coffee_bean_val = st.selectbox('커피콩', ['아라비카', '로부스타'])
-    coffee_roast_val = st.selectbox('커피 로스팅', ['라이트', '미디엄', '다크'])
-    brewing_val = st.selectbox('추출 방법', ['에어로프레스', '드립', '프렌치 프레스', '모카 포트', '사이폰'])
-    serving_type_val = st.selectbox('서빙 형식', ['핫', '아이스', '프라페'])
-    milk_val = st.select_slider('우유 정도', ['없음', '낮음', '중간', '높음'])
-    owncup_val = st.checkbox('자신의 컵 가져오기')
+    coffee_bean_val = st.selectbox('하위항목1분류', ['하위항목1-1', '하위항목1-2', '하위항목1-3'])
+    coffee_roast_val = st.selectbox('하위항목2분류', ['하위항목2-1', '하위항목2-2', '하위항목2-3'])
+    brewing_val = st.selectbox('하위항목3분류', ['하위항목3-1', '하위항목3-2', '하위항목3-3'])
+    serving_type_val = st.selectbox('하위항목4분류', ['하위항목4-1', '하위항목4-2', '하위항목4-3'])
+    milk_val = st.select_slider('하위항목5분류', ['저', '중', '고'])
+    owncup_val = st.checkbox('체크박스')
 
     # 모든 양식은 제출 버튼을 가져야 함
     submitted = st.form_submit_button('제출')
 
 if submitted:
     st.markdown(f'''
-        ☕ 주문하신 내용:
-        - 커피콩: `{coffee_bean_val}`
-        - 커피 로스팅: `{coffee_roast_val}`
-        - 추출 방법: `{brewing_val}`
-        - 서빙 형식: `{serving_type_val}`
-        - 우유: `{milk_val}`
-        - 자신의 컵 가져오기: `{owncup_val}`
+        결과 :
+        - 하위항목1 : `{coffee_bean_val}`
+        - 하위항목2 : `{coffee_roast_val}`
+        - 하위항목3 : `{brewing_val}`
+        - 하위항목4 : `{serving_type_val}`
+        - 하위항목5 : `{milk_val}`
+        - 체크박스 : `{owncup_val}`
         ''')
 else:
-    st.write('☝️ 주문하세요!')
+    st.write('결과 없음.')
 
 
-# 객체 표기법을 사용한 짧은 예시
-st.header('2. 객체 표기법 예시')
+# # 객체 표기법을 사용한 짧은 예시
+# st.header('2. 객체 표기법 예시')
 
-form = st.form('my_form_2')
-selected_val = form.slider('값 선택')
-form.form_submit_button('제출') #모든 양식은 st.form_submit_button을 포함해야 함.
-#st.button과 st.download_button은 양식에 추가할 수 없습니다.
-st.write('선택된 값: ', selected_val)
+# form = st.form('my_form_2')
+# selected_val = form.slider('값 선택')
+# form.form_submit_button('제출') #모든 양식은 st.form_submit_button을 포함해야 함.
+# #st.button과 st.download_button은 양식에 추가할 수 없습니다.
+# st.write('선택된 값: ', selected_val)
