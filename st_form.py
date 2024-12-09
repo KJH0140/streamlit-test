@@ -4,10 +4,10 @@ st.title('제목')
 
 # 'with' 표기법을 사용한 전체 예시
 st.header('소제목')
-st.subheader('상위항목')
+st.subheader('설명')
 
 with st.form('my_form'):
-    st.subheader('상위항목설명')
+    st.subheader('상위항목')
 
     # 입력 위젯
     coffee_bean_val = st.selectbox('하위항목1분류', ['하위항목1-1', '하위항목1-2', '하위항목1-3'])
