@@ -14,7 +14,7 @@ with st.form('my_form'):
     coffee_roast_val = st.selectbox('하위항목2분류', ['하위항목2-1', '하위항목2-2', '하위항목2-3'])
     brewing_val = st.selectbox('하위항목3분류', ['하위항목3-1', '하위항목3-2', '하위항목3-3'])
     serving_type_val = st.selectbox('하위항목4분류', ['하위항목4-1', '하위항목4-2', '하위항목4-3'])
-    milk_val = st.select_slider('하위항목5분류', ['저', '중', '고'])
+    milk_val = st.select_slider('하위항목5분류', ['최저', '저', '중저', '중', '중고', '고', '최고'])
     owncup_val = st.checkbox('체크박스')
 
     # 모든 양식은 제출 버튼을 가져야 함
