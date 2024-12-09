@@ -14,7 +14,7 @@ with st.form('my_form'):
     b_val = st.selectbox('하위항목2분류', ['하위항목2-1', '하위항목2-2', '하위항목2-3'])
     c_val = st.selectbox('하위항목3분류', ['하위항목3-1', '하위항목3-2', '하위항목3-3'])
     d_val = st.select_slider('하위항목4분류', ['최저', '저', '중저', '중', '중고', '고', '최고'])
-    e_val = st.checkbox('체크유무')
+    e_val = st.checkbox('체크여부')
 
     # 모든 양식은 제출 버튼을 가져야 함
     submitted = st.form_submit_button('제출')
